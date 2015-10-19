@@ -52,6 +52,19 @@
     [v addSubview:fillV];
     [fillV ff_FillWithType:ff_FillTypeBotton referView:v constant:100 insets:UIEdgeInsetsMake(10, 10, 10, 10)];
     
+    v = [self addContentView];
+    fillV = [UIButton buttonWithType:UIButtonTypeCustom];
+    fillV.backgroundColor = [UIColor orangeColor];
+    [fillV setTitle:@"左部填充 高度 100" forState:UIControlStateNormal];
+    [v addSubview:fillV];
+    [fillV ff_FillWithType:ff_FillTypeLeft referView:v constant:100 insets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    
+    fillV = [UIButton buttonWithType:UIButtonTypeCustom];
+    fillV.backgroundColor = [UIColor orangeColor];
+    [fillV setTitle:@"右部填充 高度 100" forState:UIControlStateNormal];
+    [v addSubview:fillV];
+    [fillV ff_FillWithType:ff_FillTypeRight referView:v constant:100 insets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    
     
     #pragma mark - 参照填充
     
@@ -73,6 +86,23 @@
     [v addSubview:fillV];
     [fillV ff_FillWithType:ff_FillTypeBotton referView:v referView:btn insets:UIEdgeInsetsMake(10, 10, 10, 10)];
     
+    v = [self addContentView];
+    btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.backgroundColor = [UIColor blueColor];
+    [v addSubview:btn];
+    [btn ff_AlignInnerWithType:ff_AlignTypeCenterCenter referView:v size:CGSizeMake(100, 100) offset:CGPointZero];
+    
+    fillV = [UIButton buttonWithType:UIButtonTypeCustom];
+    fillV.backgroundColor = [UIColor orangeColor];
+    [fillV setTitle:@"左" forState:UIControlStateNormal];
+    [v addSubview:fillV];
+    [fillV ff_FillWithType:ff_FillTypeLeft referView:v referView:btn insets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    
+    fillV = [UIButton buttonWithType:UIButtonTypeCustom];
+    fillV.backgroundColor = [UIColor orangeColor];
+    [fillV setTitle:@"右" forState:UIControlStateNormal];
+    [v addSubview:fillV];
+    [fillV ff_FillWithType:ff_FillTypeRight referView:v referView:btn insets:UIEdgeInsetsMake(10, 10, 10, 10)];
 }
 
 
