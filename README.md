@@ -5,7 +5,7 @@
 
 ## Screenshots
 
-<img src="https://github.com/liufan321/FFLabel/blob/master/screenshots/screenshots_1.png?raw=true" alt="FFAutoLayout_OC" title="FFAutoLayout_OC">
+<img src="https://github.com/Rdxer/FFAutoLayout_OC/blob/master/ffautolayout.gif?raw=true" alt="FFAutoLayout_OC" title="FFAutoLayout_OC">
 
 ## Requirements
 
