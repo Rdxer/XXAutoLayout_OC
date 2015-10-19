@@ -50,7 +50,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 
 @interface UIView (AutoLayout)
 
-/// 填充 (宽高相等)
+/// 部分填充 (正方形填充)
 ///
 /// @param type      填充类型
 /// @param referView 填充的参考视图
@@ -58,18 +58,19 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 ///
 /// @return 约束数组
 - (nonnull NSArray<NSLayoutConstraint *> *)ff_FillWithType:(ff_FillType)type referView:(nonnull UIView *)referView insets: (UIEdgeInsets )insets;
-/// 填充
+
+/// 部分填充
 ///
 /// @param type       填充类型
 /// @param referView  填充的参考视图
-/// @param referView2 填充范围的参考视图
-/// @param constant   填充的大小 (CGFLOAT_MIN 不添加约束)
+/// @param referView2 填充范围的参考视图 (如果为 nil,则不会添加)
+/// @param constant   填充的大小 (如果值为 CGFLOAT_MIN 不添加约束)
 /// @param insets     边距
 ///
 /// @return 约束数组
 - (nonnull NSArray<NSLayoutConstraint *> *)ff_FillWithType:(ff_FillType)type referView:(nonnull UIView *)referView referView:(nullable UIView *)referView2 constant:(CGFloat)constant insets: (UIEdgeInsets )insets;
 
-/// 填充视图的一个方向(固定大小)
+/// 部分填充(固定大小)
 ///
 /// @param type      填充的方向
 /// @param referView 参考视图
@@ -89,7 +90,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 /// @return 约束数组
 - (nonnull NSArray<NSLayoutConstraint *> *)ff_FillWithType:(ff_FillType)type referView:(nonnull UIView *)referView referView:(nonnull UIView *)referView2 insets: (UIEdgeInsets )insets;
 
-///  填充子视图
+/// 全部填充
 ///
 /// @param referView 参考视图
 /// @param insets    间距

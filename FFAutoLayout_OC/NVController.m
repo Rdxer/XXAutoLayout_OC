@@ -21,7 +21,7 @@
     id target = self.interactivePopGestureRecognizer.delegate;
 
 #pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Werror"
+#pragma clang diagnostic ignored "-Wundeclared-selector"
     // 创建全屏滑动手势，调用系统自带滑动手势的target的action方法
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:target action:@selector(handleNavigationTransition:)];
 #pragma clang diagnostic pop
