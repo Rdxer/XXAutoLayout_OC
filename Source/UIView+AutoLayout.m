@@ -185,7 +185,7 @@ CGSize CGSizeNull(){
     UIView *lastView = subViews.lastObject;
     [cons addObject:[NSLayoutConstraint constraintWithItem:lastView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-insets.bottom]];
     
-    [self addConstraints:cons];
+    [self.subviews containsObject:subViews.firstObject] ? [self addConstraints:cons] : [self.superview addConstraints:cons];
     
     return nil;
 }

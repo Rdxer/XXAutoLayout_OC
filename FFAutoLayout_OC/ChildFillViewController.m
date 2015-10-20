@@ -23,6 +23,12 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    UIView *contentView = [[UIView alloc]init];
+    contentView.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:contentView];
+    
+    [contentView ff_FillWithType:ff_FillTypeTop referView:self.view constant:200 insets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    
     UIView *blueV = [[UIView alloc]init];
     blueV.backgroundColor = [UIColor blueColor];
     
@@ -38,6 +44,6 @@
     
     [self.view addSubview:yellowV];
     
-    [self.view ff_VerticalTileWithSubviews:@[blueV,yellowV,redV] insets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    [contentView ff_VerticalTileWithSubviews:@[blueV,yellowV,redV] insets:UIEdgeInsetsMake(10, 10, 10, 10)];
 }
 @end

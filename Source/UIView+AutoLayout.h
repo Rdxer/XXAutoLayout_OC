@@ -102,7 +102,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 ///
 ///  @param type:      对齐方式
 ///  @param referView: 参考视图
-///  @param size:      视图大小，如果是 CGSizeNull(={-1,-1}) 则不设置大小
+///  @param size:      视图大小，如果是 CGSizeNull(CGFLOAT_MIN,CGFLOAT_MIN) 则不设置大小
 ///  @param offset:    偏移量，默认是 CGPoint(x: 0, y: 0)
 ///
 ///  @return 约束数组
@@ -112,7 +112,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 ///
 ///  @param type:      对齐方式
 ///  @param referView: 参考视图
-///  @param size:      视图大小，如果是 CGSizeNull(={-1,-1}) 则不设置大小
+///  @param size:      视图大小，如果是 CGSizeNull(CGFLOAT_MIN,CGFLOAT_MIN) 则不设置大小
 ///  @param offset:    偏移量，默认是 CGPoint(x: 0, y: 0)
 ///
 ///  @return 约束数组
@@ -122,7 +122,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 ///
 ///  @param type:      对齐方式
 ///  @param referView: 参考视图
-///  @param size:      视图大小，如果是 CGSizeNull(={-1,-1}) 则不设置大小
+///  @param size:      视图大小，如果是 CGSizeNull(CGFLOAT_MIN,CGFLOAT_MIN) 则不设置大小
 ///  @param offset:    偏移量，默认是 CGPoint(x: 0, y: 0)
 ///
 ///  @return 约束数组

@@ -46,6 +46,12 @@
     [v addSubview:fillV];
     [fillV ff_FillWithType:ff_FillTypeTop referView:v constant:100 insets:UIEdgeInsetsMake(10, 10, 10, 10)];
     
+    UIButton *fillLeftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:fillLeftBtn];
+    [fillLeftBtn setTitle:@"正方形" forState:UIControlStateNormal];
+    fillLeftBtn.backgroundColor = [UIColor redColor];
+    [fillLeftBtn ff_FillWithType:ff_FillTypeLeft referView:fillV insets:UIEdgeInsetsMake(10, 10, 10, 0)];
+    
     fillV = [UIButton buttonWithType:UIButtonTypeCustom];
     fillV.backgroundColor = [UIColor orangeColor];
     [fillV setTitle:@"底部填充 高度 100" forState:UIControlStateNormal];
@@ -110,7 +116,7 @@
     UIView *v = [[UIView alloc]initWithFrame:screenBounds];
     v.backgroundColor = [UIColor lightGrayColor];
     v.y = self.currY;
-    v.height -= 20;
+    v.height *= 0.5;
     self.currY += (margin + v.height);
     self.scrollV.contentSize = CGSizeMake(screenBounds.size.width, screenBounds.size.height + self.currY);
     [self.scrollV addSubview:v];
