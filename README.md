@@ -1,7 +1,5 @@
 # FFAutoLayout_OC
 
-FFAutoLayout 的 oc 版本,并且新添加了一些填充的布局功能,
-
 一些简单的常用的页面布局,
 支持和 Swift 的混编
 
