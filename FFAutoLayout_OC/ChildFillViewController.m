@@ -46,4 +46,9 @@
     
     [contentView ff_VerticalTileWithSubviews:@[blueV,yellowV,redV] insets:UIEdgeInsetsMake(10, 10, 10, 10)];
 }
+
+- (void)setAccessibilit{
+    //ghjklkjghjklkjhg
+}
+
 @end

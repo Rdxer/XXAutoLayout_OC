@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD10AC7C1BEA77DE00868299 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FD10AC7B1BEA77DE00868299 /* TestVC.m */; settings = {ASSET_TAGS = (); }; };
 		FD76C6551BD3B6D20065910D /* UIView+AdjustFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76C6541BD3B6D20065910D /* UIView+AdjustFrame.m */; settings = {ASSET_TAGS = (); }; };
 		FD76C6581BD3C66C0065910D /* NVController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76C6571BD3C66C0065910D /* NVController.m */; settings = {ASSET_TAGS = (); }; };
 		FD7B775A1BD38C4C0012F9E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B77591BD38C4C0012F9E5 /* main.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD10AC7A1BEA77DE00868299 /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		FD10AC7B1BEA77DE00868299 /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		FD76C6531BD3B6D20065910D /* UIView+AdjustFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AdjustFrame.h"; sourceTree = "<group>"; };
 		FD76C6541BD3B6D20065910D /* UIView+AdjustFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AdjustFrame.m"; sourceTree = "<group>"; };
 		FD76C6561BD3C66C0065910D /* NVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVController.h; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				FD76C6541BD3B6D20065910D /* UIView+AdjustFrame.m */,
 				FD76C6561BD3C66C0065910D /* NVController.h */,
 				FD76C6571BD3C66C0065910D /* NVController.m */,
+				FD10AC7A1BEA77DE00868299 /* TestVC.h */,
+				FD10AC7B1BEA77DE00868299 /* TestVC.m */,
 				FD7B77611BD38C4C0012F9E5 /* Main.storyboard */,
 				FD7B77641BD38C4C0012F9E5 /* Assets.xcassets */,
 				FD7B77661BD38C4C0012F9E5 /* LaunchScreen.storyboard */,
@@ -196,6 +201,7 @@
 				FD7B777E1BD393D80012F9E5 /* FillViewController.m in Sources */,
 				FD7B777B1BD393A60012F9E5 /* NormalViewController.m in Sources */,
 				FD76C6581BD3C66C0065910D /* NVController.m in Sources */,
+				FD10AC7C1BEA77DE00868299 /* TestVC.m in Sources */,
 				FD7B77751BD38D500012F9E5 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

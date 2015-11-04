@@ -19,8 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.cellTitle = @[@"一般",@"填充",@"子项填充"];
-    self.cellTargetVCName = @[@"NormalViewController",@"FillViewController",@"ChildFillViewController"];
+    self.cellTitle = @[@"一般",@"填充",@"子项填充",@"测试"];
+    self.cellTargetVCName = @[@"NormalViewController",@"FillViewController",@"ChildFillViewController",@"TestVC"];
 }
 
 #pragma mark - Table view data source

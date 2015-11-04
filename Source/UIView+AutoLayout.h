@@ -78,9 +78,9 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 /// @param insets    边距
 ///
 /// @return 约束数组
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_FillWithType:(ff_FillType)type referView:(nonnull UIView *)referView constant:(CGFloat)constant insets: (UIEdgeInsets )insets;
+- (nonnull NSArray<NSLayoutConstraint *> *)ff_FillWithType:(ff_FillType)type referView:(nonnull UIView *)referView constant:(CGFloat)constant insets: (UIEdgeInsets)insets;
 
-/// 填充视图的一个方向(参照两个 View)
+/// 部分填充(填充视图的一个方向,参照两个 View)
 ///
 /// @param type         填充的方向
 /// @param referView    参考视图

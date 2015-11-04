@@ -40,6 +40,7 @@
     #pragma mark - AlignInner
     
     btn = [self addButtonWithTitle:@"上中"];
+    CGSizeNull();
     [btn ff_AlignInnerWithType:ff_AlignTypeTopCenter referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(0, margin)];
     
     btn = [self addButtonWithTitle:@"上左"];
