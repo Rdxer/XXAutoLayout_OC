@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TestVC : UIViewController
-
+@property (nonatomic, strong) UIProgressView *name;
 @end

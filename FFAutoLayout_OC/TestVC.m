@@ -29,12 +29,12 @@
     UIView *v = [[UIView alloc]init];
     v.backgroundColor = [UIColor blueColor];
     [self.view addSubview:v];
-    [v ff_FillWithType:ff_FillTypeLeft referView:self.view2 insets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    [v xx_FillWithType:xx_FillTypeLeft referView:self.view2 insets:UIEdgeInsetsMake(10, 10, 10, 10)];
     
     UIView *v2 = [[UIView alloc]init];
     v2.backgroundColor = [UIColor blueColor];
     [self.view addSubview:v2];
-    [v2 ff_FillWithType:ff_FillTypeRight referView:self.view2 referView:v insets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    [v2 xx_FillWithType:xx_FillTypeRight referView:self.view2 referView:v insets:UIEdgeInsetsMake(10, 10, 10, 10)];
     
     [self addGestureRecognizer];
     
@@ -47,9 +47,9 @@
         UIView *view2 = [[UIView alloc] init];
         [self.view addSubview:view2];
         view2.backgroundColor = [UIColor orangeColor];
-        NSArray *array = [view2 ff_FillWithType:ff_FillTypeBotton referView:self.view constant:100 insets:UIEdgeInsetsMake(10, 10, 10, 10)];
+        NSArray *array = [view2 xx_FillWithType:xx_FillTypeBotton referView:self.view constant:100 insets:UIEdgeInsetsMake(10, 10, 10, 10)];
         
-        self.constraintH = [view2 ff_ConstraintWithConstraintsList:array attribute:NSLayoutAttributeHeight];
+        self.constraintH = [view2 xx_ConstraintWithConstraintsList:array attribute:NSLayoutAttributeHeight];
         
         _view2 = view2;
     }

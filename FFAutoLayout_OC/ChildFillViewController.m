@@ -27,7 +27,7 @@
     contentView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:contentView];
     
-    [contentView ff_FillWithType:ff_FillTypeTop referView:self.view constant:200 insets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    [contentView xx_FillWithType:xx_FillTypeTop referView:self.view constant:200 insets:UIEdgeInsetsMake(10, 10, 10, 10)];
     
     UIView *blueV = [[UIView alloc]init];
     blueV.backgroundColor = [UIColor blueColor];
@@ -44,7 +44,7 @@
     
     [self.view addSubview:yellowV];
     
-    [contentView ff_VerticalTileWithSubviews:@[blueV,yellowV,redV] insets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    [contentView xx_VerticalTileWithSubviews:@[blueV,yellowV,redV] insets:UIEdgeInsetsMake(10, 10, 10, 10)];
 }
 
 - (void)setAccessibilit{

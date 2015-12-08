@@ -32,7 +32,7 @@
     contentView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:contentView];
     
-    [contentView ff_AlignInnerWithType:ff_AlignTypeCenterCenter referView:self.view size:CGSizeMake(contentW, contentH) offset:CGPointZero];
+    [contentView xx_AlignInnerWithType:xx_AlignTypeCenterCenter referView:self.view size:CGSizeMake(contentW, contentH) offset:CGPointZero];
     
     
     UIButton *btn;
@@ -40,71 +40,71 @@
     #pragma mark - AlignInner
     
     btn = [self addButtonWithTitle:@"上中"];
-    CGSizeNull();
-    [btn ff_AlignInnerWithType:ff_AlignTypeTopCenter referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(0, margin)];
+    
+    [btn xx_AlignInnerWithType:xx_AlignTypeTopCenter referView:contentView size:CGSizeNull() offset:CGPointMake(0, margin)];
     
     btn = [self addButtonWithTitle:@"上左"];
-    [btn ff_AlignInnerWithType:ff_AlignTypeTopLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, margin)];
+    [btn xx_AlignInnerWithType:xx_AlignTypeTopLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, margin)];
     
     btn = [self addButtonWithTitle:@"上右"];
-    [btn ff_AlignInnerWithType:ff_AlignTypeTopRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, margin)];
+    [btn xx_AlignInnerWithType:xx_AlignTypeTopRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, margin)];
     
     btn = [self addButtonWithTitle:@"中中"];
-    [btn ff_AlignInnerWithType:ff_AlignTypeCenterCenter referView:contentView size:CGSizeMake(w, h) offset:CGPointZero];
+    [btn xx_AlignInnerWithType:xx_AlignTypeCenterCenter referView:contentView size:CGSizeMake(w, h) offset:CGPointZero];
     
     btn = [self addButtonWithTitle:@"中左"];
-    [btn ff_AlignInnerWithType:ff_AlignTypeCenterLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, 0)];
+    [btn xx_AlignInnerWithType:xx_AlignTypeCenterLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, 0)];
     
     btn = [self addButtonWithTitle:@"中右"];
-    [btn ff_AlignInnerWithType:ff_AlignTypeCenterRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, 0)];
+    [btn xx_AlignInnerWithType:xx_AlignTypeCenterRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, 0)];
     
     btn = [self addButtonWithTitle:@"下中"];
-    [btn ff_AlignInnerWithType:ff_AlignTypeBottomCenter referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(0, -margin)];
+    [btn xx_AlignInnerWithType:xx_AlignTypeBottomCenter referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(0, -margin)];
     
     btn = [self addButtonWithTitle:@"下左"];
-    [btn ff_AlignInnerWithType:ff_AlignTypeBottomLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, -margin)];
+    [btn xx_AlignInnerWithType:xx_AlignTypeBottomLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, -margin)];
     
     btn = [self addButtonWithTitle:@"下右"];
-    [btn ff_AlignInnerWithType:ff_AlignTypeBottomRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, -margin)];
+    [btn xx_AlignInnerWithType:xx_AlignTypeBottomRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, -margin)];
     
     
     #pragma mark - AlignVertical
     
     btn = [self addButtonWithTitle:@"上中"];
-    [btn ff_AlignVerticalWithType:ff_AlignTypeTopCenter referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(0, -margin)];
+    [btn xx_AlignVerticalWithType:xx_AlignTypeTopCenter referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(0, -margin)];
     
     btn = [self addButtonWithTitle:@"上左"];
-    [btn ff_AlignVerticalWithType:ff_AlignTypeTopLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, -margin)];
+    [btn xx_AlignVerticalWithType:xx_AlignTypeTopLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, -margin)];
     
     btn = [self addButtonWithTitle:@"上右"];
-    [btn ff_AlignVerticalWithType:ff_AlignTypeTopRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, -margin)];
+    [btn xx_AlignVerticalWithType:xx_AlignTypeTopRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, -margin)];
     
     
     btn = [self addButtonWithTitle:@"下中"];
-    [btn ff_AlignVerticalWithType:ff_AlignTypeBottomCenter referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(0, margin)];
+    [btn xx_AlignVerticalWithType:xx_AlignTypeBottomCenter referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(0, margin)];
     
     btn = [self addButtonWithTitle:@"下左"];
-    [btn ff_AlignVerticalWithType:ff_AlignTypeBottomLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, margin)];
+    [btn xx_AlignVerticalWithType:xx_AlignTypeBottomLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, margin)];
     
     btn = [self addButtonWithTitle:@"下右"];
-    [btn ff_AlignVerticalWithType:ff_AlignTypeBottomRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, margin)];
+    [btn xx_AlignVerticalWithType:xx_AlignTypeBottomRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, margin)];
     
     
     #pragma mark - AlignHorizontal
     
     btn = [self addButtonWithTitle:@"左上"];
-    [btn ff_AlignHorizontalWithType:ff_AlignTypeTopLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, 0)];
+    [btn xx_AlignHorizontalWithType:xx_AlignTypeTopLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, 0)];
     btn = [self addButtonWithTitle:@"左中"];
-    [btn ff_AlignHorizontalWithType:ff_AlignTypeCenterLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, 0)];
+    [btn xx_AlignHorizontalWithType:xx_AlignTypeCenterLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, 0)];
     btn = [self addButtonWithTitle:@"左下"];
-    [btn ff_AlignHorizontalWithType:ff_AlignTypeBottomLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, 0)];
+    [btn xx_AlignHorizontalWithType:xx_AlignTypeBottomLeft referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(-margin, 0)];
     
     btn = [self addButtonWithTitle:@"右上"];
-    [btn ff_AlignHorizontalWithType:ff_AlignTypeTopRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, 0)];
+    [btn xx_AlignHorizontalWithType:xx_AlignTypeTopRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, 0)];
     btn = [self addButtonWithTitle:@"右中"];
-    [btn ff_AlignHorizontalWithType:ff_AlignTypeCenterRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, 0)];
+    [btn xx_AlignHorizontalWithType:xx_AlignTypeCenterRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, 0)];
     btn = [self addButtonWithTitle:@"右下"];
-    [btn ff_AlignHorizontalWithType:ff_AlignTypeBottomRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, 0)];
+    [btn xx_AlignHorizontalWithType:xx_AlignTypeBottomRight referView:contentView size:CGSizeMake(w, h) offset:CGPointMake(margin, 0)];
     
     
     

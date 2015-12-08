@@ -15,37 +15,37 @@
 CGSize CGSizeNull();
 
 /// 对齐类型枚举，设置控件相对于父视图的位置
-typedef NS_ENUM(NSInteger, ff_AlignType){
+typedef NS_ENUM(NSInteger, xx_AlignType){
     /// 左上
-    ff_AlignTypeTopLeft,
+    xx_AlignTypeTopLeft,
     /// 右上
-    ff_AlignTypeTopRight,
+    xx_AlignTypeTopRight,
     /// 上中
-    ff_AlignTypeTopCenter,
+    xx_AlignTypeTopCenter,
     /// 左下
-    ff_AlignTypeBottomLeft,
+    xx_AlignTypeBottomLeft,
     /// 右下
-    ff_AlignTypeBottomRight,
+    xx_AlignTypeBottomRight,
     /// 下中
-    ff_AlignTypeBottomCenter,
+    xx_AlignTypeBottomCenter,
     /// 左中
-    ff_AlignTypeCenterLeft,
+    xx_AlignTypeCenterLeft,
     /// 右中
-    ff_AlignTypeCenterRight,
+    xx_AlignTypeCenterRight,
     /// 居中
-    ff_AlignTypeCenterCenter
+    xx_AlignTypeCenterCenter
 };
 
 /// 填充类型枚举
-typedef NS_ENUM(NSInteger, ff_FillType){
+typedef NS_ENUM(NSInteger, xx_FillType){
     /// 顶部填充
-    ff_FillTypeTop = ff_AlignTypeTopLeft,
+    xx_FillTypeTop = xx_AlignTypeTopLeft,
     /// 左边填充
-    ff_FillTypeLeft = ff_AlignTypeBottomLeft,
+    xx_FillTypeLeft = xx_AlignTypeBottomLeft,
     /// 下填充
-    ff_FillTypeBotton = ff_AlignTypeBottomRight,
+    xx_FillTypeBotton = xx_AlignTypeBottomRight,
     /// 右填充
-    ff_FillTypeRight = ff_AlignTypeTopRight
+    xx_FillTypeRight = xx_AlignTypeTopRight
 };
 
 @interface UIView (AutoLayout)
@@ -57,7 +57,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 /// @param insets    边距
 ///
 /// @return 约束数组
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_FillWithType:(ff_FillType)type referView:(nonnull UIView *)referView insets: (UIEdgeInsets )insets;
+- (nonnull NSArray<NSLayoutConstraint *> *)xx_FillWithType:(xx_FillType)type referView:(nonnull UIView *)referView insets: (UIEdgeInsets )insets;
 
 /// 部分填充
 ///
@@ -68,7 +68,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 /// @param insets     边距
 ///
 /// @return 约束数组
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_FillWithType:(ff_FillType)type referView:(nonnull UIView *)referView referView:(nullable UIView *)referView2 constant:(CGFloat)constant insets: (UIEdgeInsets )insets;
+- (nonnull NSArray<NSLayoutConstraint *> *)xx_FillWithType:(xx_FillType)type referView:(nonnull UIView *)referView referView:(nullable UIView *)referView2 constant:(CGFloat)constant insets: (UIEdgeInsets )insets;
 
 /// 部分填充(固定大小)
 ///
@@ -78,7 +78,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 /// @param insets    边距
 ///
 /// @return 约束数组
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_FillWithType:(ff_FillType)type referView:(nonnull UIView *)referView constant:(CGFloat)constant insets: (UIEdgeInsets)insets;
+- (nonnull NSArray<NSLayoutConstraint *> *)xx_FillWithType:(xx_FillType)type referView:(nonnull UIView *)referView constant:(CGFloat)constant insets: (UIEdgeInsets)insets;
 
 /// 部分填充(填充视图的一个方向,参照两个 View)
 ///
@@ -88,7 +88,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 /// @param insets       边距
 ///
 /// @return 约束数组
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_FillWithType:(ff_FillType)type referView:(nonnull UIView *)referView referView:(nonnull UIView *)referView2 insets: (UIEdgeInsets )insets;
+- (nonnull NSArray<NSLayoutConstraint *> *)xx_FillWithType:(xx_FillType)type referView:(nonnull UIView *)referView referView:(nonnull UIView *)referView2 insets: (UIEdgeInsets )insets;
 
 /// 全部填充
 ///
@@ -96,7 +96,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 /// @param insets    间距
 ///
 /// @return 约束数组
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_FillWithReferView:(nonnull UIView *)referView insets: (UIEdgeInsets )insets;
+- (nonnull NSArray<NSLayoutConstraint *> *)xx_FillWithReferView:(nonnull UIView *)referView insets: (UIEdgeInsets )insets;
 
 ///  参照参考视图内部对齐
 ///
@@ -106,7 +106,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 ///  @param offset:    偏移量，默认是 CGPoint(x: 0, y: 0)
 ///
 ///  @return 约束数组
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_AlignInnerWithType:(ff_AlignType)type referView:(nonnull UIView *)referView size:(CGSize)size offset:(CGPoint)offset;
+- (nonnull NSArray<NSLayoutConstraint *> *)xx_AlignInnerWithType:(xx_AlignType)type referView:(nonnull UIView *)referView size:(CGSize)size offset:(CGPoint)offset;
 
 ///  参照参考视图垂直对齐
 ///
@@ -116,7 +116,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 ///  @param offset:    偏移量，默认是 CGPoint(x: 0, y: 0)
 ///
 ///  @return 约束数组
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_AlignVerticalWithType:(ff_AlignType)type referView:(nonnull UIView *)referView size:(CGSize)size offset:(CGPoint)offset;
+- (nonnull NSArray<NSLayoutConstraint *> *)xx_AlignVerticalWithType:(xx_AlignType)type referView:(nonnull UIView *)referView size:(CGSize)size offset:(CGPoint)offset;
 
 ///  参照参考视图水平对齐
 ///
@@ -126,7 +126,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 ///  @param offset:    偏移量，默认是 CGPoint(x: 0, y: 0)
 ///
 ///  @return 约束数组
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_AlignHorizontalWithType:(ff_AlignType)type referView:(nonnull UIView *)referView size:(CGSize)size offset:(CGPoint)offset;
+- (nonnull NSArray<NSLayoutConstraint *> *)xx_AlignHorizontalWithType:(xx_AlignType)type referView:(nonnull UIView *)referView size:(CGSize)size offset:(CGPoint)offset;
 
 ///  在当前视图内部水平平铺控件
 ///
@@ -134,7 +134,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 ///  @param insets: 间距
 ///
 ///  @return 约束数组
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_HorizontalTileWithSubviews:(nonnull NSArray<UIView *> *)subViews insets:(UIEdgeInsets)insets;
+- (nonnull NSArray<NSLayoutConstraint *> *)xx_HorizontalTileWithSubviews:(nonnull NSArray<UIView *> *)subViews insets:(UIEdgeInsets)insets;
 
 ///  在当前视图内部垂直平铺控件
 ///
@@ -142,7 +142,7 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 ///  @param insets: 间距
 ///
 ///  @return 约束数组
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_VerticalTileWithSubviews:(nonnull NSArray<UIView *> *)subViews insets:(UIEdgeInsets)insets;
+- (nonnull NSArray<NSLayoutConstraint *> *)xx_VerticalTileWithSubviews:(nonnull NSArray<UIView *> *)subViews insets:(UIEdgeInsets)insets;
 
 ///  从约束数组中查找指定 attribute 的约束
 ///
@@ -150,11 +150,11 @@ typedef NS_ENUM(NSInteger, ff_FillType){
 ///  @param attribute:       约束属性
 ///
 ///  @return attribute 对应的约束
-- (nullable NSLayoutConstraint *)ff_ConstraintWithConstraintsList:(nonnull NSArray<  NSLayoutConstraint *> *)constraintsList attribute:(NSLayoutAttribute)attribute;
+- (nullable NSLayoutConstraint *)xx_ConstraintWithConstraintsList:(nonnull NSArray<  NSLayoutConstraint *> *)constraintsList attribute:(NSLayoutAttribute)attribute;
 
 @end
 
-@interface ff_LayoutAttributes : NSObject
+@interface xx_LayoutAttributes : NSObject
 
 
 @end

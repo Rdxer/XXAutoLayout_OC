@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD10AC7C1BEA77DE00868299 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FD10AC7B1BEA77DE00868299 /* TestVC.m */; settings = {ASSET_TAGS = (); }; };
-		FD76C6551BD3B6D20065910D /* UIView+AdjustFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76C6541BD3B6D20065910D /* UIView+AdjustFrame.m */; settings = {ASSET_TAGS = (); }; };
-		FD76C6581BD3C66C0065910D /* NVController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76C6571BD3C66C0065910D /* NVController.m */; settings = {ASSET_TAGS = (); }; };
+		FD10AC7C1BEA77DE00868299 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FD10AC7B1BEA77DE00868299 /* TestVC.m */; };
+		FD76C6551BD3B6D20065910D /* UIView+AdjustFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76C6541BD3B6D20065910D /* UIView+AdjustFrame.m */; };
+		FD76C6581BD3C66C0065910D /* NVController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD76C6571BD3C66C0065910D /* NVController.m */; };
 		FD7B775A1BD38C4C0012F9E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B77591BD38C4C0012F9E5 /* main.m */; };
 		FD7B775D1BD38C4C0012F9E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B775C1BD38C4C0012F9E5 /* AppDelegate.m */; };
 		FD7B77631BD38C4C0012F9E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7B77611BD38C4C0012F9E5 /* Main.storyboard */; };
 		FD7B77651BD38C4C0012F9E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD7B77641BD38C4C0012F9E5 /* Assets.xcassets */; };
 		FD7B77681BD38C4C0012F9E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7B77661BD38C4C0012F9E5 /* LaunchScreen.storyboard */; };
-		FD7B77721BD38CA90012F9E5 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B77711BD38CA90012F9E5 /* UIView+AutoLayout.m */; settings = {ASSET_TAGS = (); }; };
-		FD7B77751BD38D500012F9E5 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B77741BD38D500012F9E5 /* TableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		FD7B777B1BD393A60012F9E5 /* NormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B777A1BD393A60012F9E5 /* NormalViewController.m */; settings = {ASSET_TAGS = (); }; };
-		FD7B777E1BD393D80012F9E5 /* FillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B777D1BD393D80012F9E5 /* FillViewController.m */; settings = {ASSET_TAGS = (); }; };
-		FD7B77811BD3940F0012F9E5 /* ChildFillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B77801BD3940F0012F9E5 /* ChildFillViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FD7B77721BD38CA90012F9E5 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B77711BD38CA90012F9E5 /* UIView+AutoLayout.m */; };
+		FD7B77751BD38D500012F9E5 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B77741BD38D500012F9E5 /* TableViewController.m */; };
+		FD7B777B1BD393A60012F9E5 /* NormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B777A1BD393A60012F9E5 /* NormalViewController.m */; };
+		FD7B777E1BD393D80012F9E5 /* FillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B777D1BD393D80012F9E5 /* FillViewController.m */; };
+		FD7B77811BD3940F0012F9E5 /* ChildFillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7B77801BD3940F0012F9E5 /* ChildFillViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		FD76C6541BD3B6D20065910D /* UIView+AdjustFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AdjustFrame.m"; sourceTree = "<group>"; };
 		FD76C6561BD3C66C0065910D /* NVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVController.h; sourceTree = "<group>"; };
 		FD76C6571BD3C66C0065910D /* NVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVController.m; sourceTree = "<group>"; };
-		FD7B77551BD38C4C0012F9E5 /* FFAutoLayout_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFAutoLayout_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD7B77551BD38C4C0012F9E5 /* XXAutoLayout_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XXAutoLayout_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7B77591BD38C4C0012F9E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FD7B775B1BD38C4C0012F9E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FD7B775C1BD38C4C0012F9E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		FD7B774C1BD38C4C0012F9E5 = {
 			isa = PBXGroup;
 			children = (
-				FD7B77571BD38C4C0012F9E5 /* FFAutoLayout_OC */,
+				FD7B77571BD38C4C0012F9E5 /* XXAutoLayout_OC */,
 				FD7B77561BD38C4C0012F9E5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,12 +71,12 @@
 		FD7B77561BD38C4C0012F9E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FD7B77551BD38C4C0012F9E5 /* FFAutoLayout_OC.app */,
+				FD7B77551BD38C4C0012F9E5 /* XXAutoLayout_OC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FD7B77571BD38C4C0012F9E5 /* FFAutoLayout_OC */ = {
+		FD7B77571BD38C4C0012F9E5 /* XXAutoLayout_OC */ = {
 			isa = PBXGroup;
 			children = (
 				FD7B776F1BD38C650012F9E5 /* Source */,
@@ -102,6 +102,7 @@
 				FD7B77691BD38C4C0012F9E5 /* Info.plist */,
 				FD7B77581BD38C4C0012F9E5 /* Supporting Files */,
 			);
+			name = XXAutoLayout_OC;
 			path = FFAutoLayout_OC;
 			sourceTree = "<group>";
 		};
@@ -125,9 +126,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FD7B77541BD38C4C0012F9E5 /* FFAutoLayout_OC */ = {
+		FD7B77541BD38C4C0012F9E5 /* XXAutoLayout_OC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD7B776C1BD38C4C0012F9E5 /* Build configuration list for PBXNativeTarget "FFAutoLayout_OC" */;
+			buildConfigurationList = FD7B776C1BD38C4C0012F9E5 /* Build configuration list for PBXNativeTarget "XXAutoLayout_OC" */;
 			buildPhases = (
 				FD7B77511BD38C4C0012F9E5 /* Sources */,
 				FD7B77521BD38C4C0012F9E5 /* Frameworks */,
@@ -137,9 +138,9 @@
 			);
 			dependencies = (
 			);
-			name = FFAutoLayout_OC;
+			name = XXAutoLayout_OC;
 			productName = FFAutoLayout_OC;
-			productReference = FD7B77551BD38C4C0012F9E5 /* FFAutoLayout_OC.app */;
+			productReference = FD7B77551BD38C4C0012F9E5 /* XXAutoLayout_OC.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -157,7 +158,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FD7B77501BD38C4C0012F9E5 /* Build configuration list for PBXProject "FFAutoLayout_OC" */;
+			buildConfigurationList = FD7B77501BD38C4C0012F9E5 /* Build configuration list for PBXProject "XXAutoLayout_OC" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -170,7 +171,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FD7B77541BD38C4C0012F9E5 /* FFAutoLayout_OC */,
+				FD7B77541BD38C4C0012F9E5 /* XXAutoLayout_OC */,
 			);
 		};
 /* End PBXProject section */
@@ -314,8 +315,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FFAutoLayout_OC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rdxer.FFAutoLayout-OC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rdxer.XXAutoLayout-OC";
+				PRODUCT_NAME = XXAutoLayout_OC;
 			};
 			name = Debug;
 		};
@@ -325,15 +326,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FFAutoLayout_OC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rdxer.FFAutoLayout-OC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rdxer.XXAutoLayout-OC";
+				PRODUCT_NAME = XXAutoLayout_OC;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FD7B77501BD38C4C0012F9E5 /* Build configuration list for PBXProject "FFAutoLayout_OC" */ = {
+		FD7B77501BD38C4C0012F9E5 /* Build configuration list for PBXProject "XXAutoLayout_OC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD7B776A1BD38C4C0012F9E5 /* Debug */,
@@ -342,7 +343,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FD7B776C1BD38C4C0012F9E5 /* Build configuration list for PBXNativeTarget "FFAutoLayout_OC" */ = {
+		FD7B776C1BD38C4C0012F9E5 /* Build configuration list for PBXNativeTarget "XXAutoLayout_OC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD7B776D1BD38C4C0012F9E5 /* Debug */,

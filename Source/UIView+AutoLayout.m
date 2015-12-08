@@ -12,7 +12,7 @@ CGSize CGSizeNull(){
     return CGSizeNullV;
 }
 
-@interface ff_LayoutAttributes ()
+@interface xx_LayoutAttributes ()
 
 @property (nonatomic, assign) NSLayoutAttribute horizontal;
 @property (nonatomic, assign) NSLayoutAttribute referHorizontal;
@@ -28,8 +28,8 @@ CGSize CGSizeNull(){
 @property (nonatomic, assign) NSLayoutAttribute otherFillAttribute;
 @property (nonatomic, assign) NSLayoutAttribute referOtherFillAttribute;
 
-+(instancetype)layoutAttributesWithFillType:(ff_FillType) type insets: (UIEdgeInsets)insets;
-+(instancetype)layoutAttributesWithType:(ff_AlignType) type isInner:(BOOL) isInner isVertical:(BOOL) isVertical;
++(instancetype)layoutAttributesWithFillType:(xx_FillType) type insets: (UIEdgeInsets)insets;
++(instancetype)layoutAttributesWithType:(xx_AlignType) type isInner:(BOOL) isInner isVertical:(BOOL) isVertical;
 
 - (instancetype)initWithHorizontal:(NSLayoutAttribute)horizontal referHorizontal:(NSLayoutAttribute)referHorizontal vertical:(NSLayoutAttribute)vertical referVertical:(NSLayoutAttribute)referVertical;
 
@@ -43,10 +43,10 @@ CGSize CGSizeNull(){
 
 @implementation UIView (AutoLayout)
 /// 填充视图的一个方向(宽高相等)
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_FillWithType:(ff_FillType)type referView:(nonnull UIView *)referView insets: (UIEdgeInsets )insets{
+- (nonnull NSArray<NSLayoutConstraint *> *)xx_FillWithType:(xx_FillType)type referView:(nonnull UIView *)referView insets: (UIEdgeInsets )insets{
     
     NSMutableArray<NSLayoutConstraint *> *cons = [[NSMutableArray alloc]init];
-    [cons addObjectsFromArray:[self ff_FillWithType:type referView:referView referView:nil constant:CGFLOAT_MIN insets:insets]];
+    [cons addObjectsFromArray:[self xx_FillWithType:type referView:referView referView:nil constant:CGFLOAT_MIN insets:insets]];
     
     NSLayoutConstraint *con = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
     [self.superview addConstraint:con];
@@ -54,23 +54,23 @@ CGSize CGSizeNull(){
     return cons;
 }
 /// 填充视图的一个方向(固定大小)
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_FillWithType:(ff_FillType)type referView:(nonnull UIView *)referView constant:(CGFloat)constant insets: (UIEdgeInsets )insets{
-    return [self ff_FillWithType:type referView:referView referView:nil constant:constant insets:insets];
+- (nonnull NSArray<NSLayoutConstraint *> *)xx_FillWithType:(xx_FillType)type referView:(nonnull UIView *)referView constant:(CGFloat)constant insets: (UIEdgeInsets )insets{
+    return [self xx_FillWithType:type referView:referView referView:nil constant:constant insets:insets];
 }
 /// 填充视图的一个方向(参照两个 View)
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_FillWithType:(ff_FillType)type referView:(nonnull UIView *)referView referView:(nonnull UIView *)referView2 insets: (UIEdgeInsets )insets{
-    return [self ff_FillWithType:type referView:referView referView:referView2 constant:CGFLOAT_MIN insets:insets];
+- (nonnull NSArray<NSLayoutConstraint *> *)xx_FillWithType:(xx_FillType)type referView:(nonnull UIView *)referView referView:(nonnull UIView *)referView2 insets: (UIEdgeInsets )insets{
+    return [self xx_FillWithType:type referView:referView referView:referView2 constant:CGFLOAT_MIN insets:insets];
 }
 
 /// 填充
-- (nonnull NSArray<NSLayoutConstraint *> *)ff_FillWithType:(ff_FillType)type referView:(nonnull UIView *)referView referView:(nullable UIView *)referView2 constant:(CGFloat)constant insets: (UIEdgeInsets )insets{
+- (nonnull NSArray<NSLayoutConstraint *> *)xx_FillWithType:(xx_FillType)type referView:(nonnull UIView *)referView referView:(nullable UIView *)referView2 constant:(CGFloat)constant insets: (UIEdgeInsets )insets{
     NSMutableArray<NSLayoutConstraint *> *cons = [[NSMutableArray alloc]init];
     
-    ff_LayoutAttributes *attributes = [ff_LayoutAttributes layoutAttributesWithFillType:type insets: (UIEdgeInsets)insets];
+    xx_LayoutAttributes *attributes = [xx_LayoutAttributes layoutAttributesWithFillType:type insets: (UIEdgeInsets)insets];
     
-    CGSize size = (type == ff_FillTypeRight || type == ff_FillTypeLeft) ? CGSizeMake(constant, CGFLOAT_MIN):CGSizeMake(CGFLOAT_MIN, constant);
+    CGSize size = (type == xx_FillTypeRight || type == xx_FillTypeLeft) ? CGSizeMake(constant, CGFLOAT_MIN):CGSizeMake(CGFLOAT_MIN, constant);
     
-    [cons addObjectsFromArray:[self ff_AlignLayoutWithReferView:referView attributes:attributes size:size offset:attributes.offset]];
+    [cons addObjectsFromArray:[self xx_AlignLayoutWithReferView:referView attributes:attributes size:size offset:attributes.offset]];
     
     NSLayoutConstraint *con = [NSLayoutConstraint constraintWithItem:self attribute:attributes.fill relatedBy:NSLayoutRelationEqual toItem:referView attribute:attributes.referFill multiplier:1.0 constant:attributes.constant];
     [self.superview addConstraint:con];
@@ -86,7 +86,7 @@ CGSize CGSizeNull(){
 }
 
 /// 填充子视图
-- (NSArray<NSLayoutConstraint *> *)ff_FillWithReferView:(UIView *)referView insets: (UIEdgeInsets )insets{
+- (NSArray<NSLayoutConstraint *> *)xx_FillWithReferView:(UIView *)referView insets: (UIEdgeInsets )insets{
     
     NSAssert(self.superview != nil, @"父视图不能为空 请将该 view 添加到视图中");
     
@@ -111,25 +111,25 @@ CGSize CGSizeNull(){
 }
 
 ///  参照参考视图内部对齐
-- (NSArray<NSLayoutConstraint *> *)ff_AlignInnerWithType:(ff_AlignType)type referView:(UIView *)referView size:(CGSize)size offset:(CGPoint)offset{
-    ff_LayoutAttributes *attributes = [ff_LayoutAttributes layoutAttributesWithType:type isInner:YES isVertical:YES];
-    return [self ff_AlignLayoutWithReferView:referView attributes:attributes size:size offset:offset];
+- (NSArray<NSLayoutConstraint *> *)xx_AlignInnerWithType:(xx_AlignType)type referView:(UIView *)referView size:(CGSize)size offset:(CGPoint)offset{
+    xx_LayoutAttributes *attributes = [xx_LayoutAttributes layoutAttributesWithType:type isInner:YES isVertical:YES];
+    return [self xx_AlignLayoutWithReferView:referView attributes:attributes size:size offset:offset];
 }
 
 ///  参照参考视图垂直对齐
-- (NSArray<NSLayoutConstraint *> *)ff_AlignVerticalWithType:(ff_AlignType)type referView:(UIView *)referView size:(CGSize)size offset:(CGPoint)offset{
-    ff_LayoutAttributes *attributes = [ff_LayoutAttributes layoutAttributesWithType:type isInner:NO isVertical:YES];
-    return [self ff_AlignLayoutWithReferView:referView attributes:attributes size:size offset:offset];
+- (NSArray<NSLayoutConstraint *> *)xx_AlignVerticalWithType:(xx_AlignType)type referView:(UIView *)referView size:(CGSize)size offset:(CGPoint)offset{
+    xx_LayoutAttributes *attributes = [xx_LayoutAttributes layoutAttributesWithType:type isInner:NO isVertical:YES];
+    return [self xx_AlignLayoutWithReferView:referView attributes:attributes size:size offset:offset];
 }
 
 ///  参照参考视图水平对齐
-- (NSArray<NSLayoutConstraint *> *)ff_AlignHorizontalWithType:(ff_AlignType)type referView:(UIView *)referView size:(CGSize)size offset:(CGPoint)offset{
-    ff_LayoutAttributes *attributes = [ff_LayoutAttributes layoutAttributesWithType:type isInner:NO isVertical:NO];
-    return [self ff_AlignLayoutWithReferView:referView attributes:attributes size:size offset:offset];
+- (NSArray<NSLayoutConstraint *> *)xx_AlignHorizontalWithType:(xx_AlignType)type referView:(UIView *)referView size:(CGSize)size offset:(CGPoint)offset{
+    xx_LayoutAttributes *attributes = [xx_LayoutAttributes layoutAttributesWithType:type isInner:NO isVertical:NO];
+    return [self xx_AlignLayoutWithReferView:referView attributes:attributes size:size offset:offset];
 }
 
 ///  在当前视图内部水平平铺控件
-- (NSArray<NSLayoutConstraint *> *)ff_HorizontalTileWithSubviews:(NSArray<UIView *> *)subViews insets:(UIEdgeInsets)insets{
+- (NSArray<NSLayoutConstraint *> *)xx_HorizontalTileWithSubviews:(NSArray<UIView *> *)subViews insets:(UIEdgeInsets)insets{
     
     NSAssert([subViews count] > 0, @"Subviews should not be empty");
     
@@ -137,7 +137,7 @@ CGSize CGSizeNull(){
     
     UIView *firstView = subViews.firstObject;
     
-    [firstView ff_AlignInnerWithType:ff_AlignTypeTopLeft referView:self size:CGSizeNull() offset:CGPointMake(insets.left, insets.top)];
+    [firstView xx_AlignInnerWithType:xx_AlignTypeTopLeft referView:self size:CGSizeNull() offset:CGPointMake(insets.left, insets.top)];
     
     [cons addObject:[NSLayoutConstraint constraintWithItem:firstView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-insets.bottom]];
     
@@ -145,8 +145,8 @@ CGSize CGSizeNull(){
     UIView *preView = firstView;
     for (int i = 1; i < count; ++i) {
         UIView * v = subViews[i];
-        [cons addObjectsFromArray:[v ff_sizeConstraintsWithReferView:firstView]];
-        [v ff_AlignHorizontalWithType:ff_AlignTypeTopRight referView:preView size:CGSizeNull() offset:CGPointMake(insets.right, 0)];
+        [cons addObjectsFromArray:[v xx_sizeConstraintsWithReferView:firstView]];
+        [v xx_AlignHorizontalWithType:xx_AlignTypeTopRight referView:preView size:CGSizeNull() offset:CGPointMake(insets.right, 0)];
         preView = v;
     }
     
@@ -159,7 +159,7 @@ CGSize CGSizeNull(){
 }
 
 ///  在当前视图内部垂直平铺控件
-- (NSArray<NSLayoutConstraint *> *)ff_VerticalTileWithSubviews:(NSArray<UIView *> *)subViews insets:(UIEdgeInsets)insets{
+- (NSArray<NSLayoutConstraint *> *)xx_VerticalTileWithSubviews:(NSArray<UIView *> *)subViews insets:(UIEdgeInsets)insets{
     
     NSAssert([subViews count] > 0, @"Subviews should not be empty");
     
@@ -167,7 +167,7 @@ CGSize CGSizeNull(){
     
     UIView *firstView = subViews[0];
     
-    [firstView ff_AlignInnerWithType:ff_AlignTypeTopLeft referView:self size:CGSizeNull() offset:CGPointMake(insets.left, insets.top)];
+    [firstView xx_AlignInnerWithType:xx_AlignTypeTopLeft referView:self size:CGSizeNull() offset:CGPointMake(insets.left, insets.top)];
     
     [cons addObject:[NSLayoutConstraint constraintWithItem:firstView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:-insets.bottom]];
     
@@ -177,8 +177,8 @@ CGSize CGSizeNull(){
     
     for (int i = 1; i < count; ++i) {
         UIView * v = subViews[i];
-        [cons addObjectsFromArray:[v ff_sizeConstraintsWithReferView:firstView]];
-        [v ff_AlignVerticalWithType:ff_AlignTypeBottomLeft referView:preView size:CGSizeNull() offset:CGPointMake(0, insets.bottom)];
+        [cons addObjectsFromArray:[v xx_sizeConstraintsWithReferView:firstView]];
+        [v xx_AlignVerticalWithType:xx_AlignTypeBottomLeft referView:preView size:CGSizeNull() offset:CGPointMake(0, insets.bottom)];
         preView = v;
     }
     
@@ -190,7 +190,7 @@ CGSize CGSizeNull(){
     return nil;
 }
 
-- (nullable NSLayoutConstraint *)ff_ConstraintWithConstraintsList:(NSArray<NSLayoutConstraint *> *)constraintsList attribute:(NSLayoutAttribute)attribute{
+- (nullable NSLayoutConstraint *)xx_ConstraintWithConstraintsList:(NSArray<NSLayoutConstraint *> *)constraintsList attribute:(NSLayoutAttribute)attribute{
     
     for (NSLayoutConstraint *cont in constraintsList) {
         if (cont.firstItem == self && cont.firstAttribute == attribute) {
@@ -211,7 +211,7 @@ CGSize CGSizeNull(){
 ///  @param offset:     偏移量，默认是 CGPoint(x: 0, y: 0)
 ///
 ///  @return 约束数组
-- (NSArray<NSLayoutConstraint *> *)ff_AlignLayoutWithReferView:(UIView *)referView attributes:(ff_LayoutAttributes *)attributes size:(CGSize)size offset:(CGPoint)offset {
+- (NSArray<NSLayoutConstraint *> *)xx_AlignLayoutWithReferView:(UIView *)referView attributes:(xx_LayoutAttributes *)attributes size:(CGSize)size offset:(CGPoint)offset {
     
     NSAssert(self.superview != nil, @"父视图不能为空 请将该 view 添加到视图中");
     
@@ -219,9 +219,9 @@ CGSize CGSizeNull(){
     
     NSMutableArray<NSLayoutConstraint *> *cons = [[NSMutableArray alloc]init];
     
-    [cons addObjectsFromArray:[self ff_positionConstraintsWithReferView:referView attributes:attributes offset:offset]];
+    [cons addObjectsFromArray:[self xx_positionConstraintsWithReferView:referView attributes:attributes offset:offset]];
     
-    [cons addObjectsFromArray:[self ff_sizeConstraintsWithSize:size]];
+    [cons addObjectsFromArray:[self xx_sizeConstraintsWithSize:size]];
     
     [self.superview addConstraints:cons];
     
@@ -235,7 +235,7 @@ CGSize CGSizeNull(){
 ///  @param offset:     偏移量
 ///
 ///  @return 约束数组
--(NSArray<NSLayoutConstraint *> *)ff_positionConstraintsWithReferView:(UIView *)referView attributes:(ff_LayoutAttributes *)attributes offset:(CGPoint)offset{
+-(NSArray<NSLayoutConstraint *> *)xx_positionConstraintsWithReferView:(UIView *)referView attributes:(xx_LayoutAttributes *)attributes offset:(CGPoint)offset{
     
     NSMutableArray<NSLayoutConstraint *> *cons = [[NSMutableArray alloc]init];
     
@@ -251,7 +251,7 @@ CGSize CGSizeNull(){
 ///  @param size: 视图大小
 ///
 ///  @return 约束数组
--(NSArray<NSLayoutConstraint *> *)ff_sizeConstraintsWithSize:(CGSize)size{
+-(NSArray<NSLayoutConstraint *> *)xx_sizeConstraintsWithSize:(CGSize)size{
     
     NSMutableArray<NSLayoutConstraint *> *cons = [[NSMutableArray alloc]init];
     
@@ -269,7 +269,7 @@ CGSize CGSizeNull(){
 ///  @param referView: 参考视图，与参考视图大小一致
 ///
 ///  @return 约束数组
--(NSArray<NSLayoutConstraint *> *)ff_sizeConstraintsWithReferView:(UIView *)referView{
+-(NSArray<NSLayoutConstraint *> *)xx_sizeConstraintsWithReferView:(UIView *)referView{
     
     NSMutableArray<NSLayoutConstraint *> *cons = [[NSMutableArray alloc]init];
     
@@ -283,33 +283,33 @@ CGSize CGSizeNull(){
 @end
 
 
-@implementation ff_LayoutAttributes
-+(instancetype)layoutAttributesWithFillType:(ff_FillType) type insets: (UIEdgeInsets)insets{
-    ff_LayoutAttributes *attributes = [self layoutAttributesWithType:(ff_AlignType)type isInner:YES isVertical:YES];
+@implementation xx_LayoutAttributes
++(instancetype)layoutAttributesWithFillType:(xx_FillType) type insets: (UIEdgeInsets)insets{
+    xx_LayoutAttributes *attributes = [self layoutAttributesWithType:(xx_AlignType)type isInner:YES isVertical:YES];
     
     switch (type) {
-        case ff_FillTypeTop:
+        case xx_FillTypeTop:
             [attributes fillWithFrom:NSLayoutAttributeRight to:NSLayoutAttributeRight];
             attributes.offset = CGPointMake(insets.left, insets.top);
             attributes.constant = -insets.right;
             attributes.otherConstant = -insets.bottom;
             [attributes fillOtherWithFrom:NSLayoutAttributeBottom to:NSLayoutAttributeTop];
             break;
-        case ff_FillTypeBotton:
+        case xx_FillTypeBotton:
             [attributes fillWithFrom:NSLayoutAttributeLeft to:NSLayoutAttributeLeft];
             attributes.offset = CGPointMake(-insets.right, -insets.bottom);
             attributes.constant = insets.left;
             attributes.otherConstant = insets.top;
             [attributes fillOtherWithFrom:NSLayoutAttributeTop to:NSLayoutAttributeBottom];
             break;
-        case ff_FillTypeLeft:
+        case xx_FillTypeLeft:
             [attributes fillWithFrom:NSLayoutAttributeTop to:NSLayoutAttributeTop];
             attributes.offset = CGPointMake(insets.left, -insets.bottom);
             attributes.constant = insets.top;
             attributes.otherConstant = -insets.right;
             [attributes fillOtherWithFrom:NSLayoutAttributeRight to:NSLayoutAttributeLeft];
             break;
-        case ff_FillTypeRight:
+        case xx_FillTypeRight:
             [attributes fillWithFrom:NSLayoutAttributeBottom to:NSLayoutAttributeBottom];
             attributes.offset = CGPointMake(-insets.right, insets.top);
             attributes.constant = -insets.bottom;
@@ -321,11 +321,11 @@ CGSize CGSizeNull(){
     }
     return attributes;
 }
-+(instancetype)layoutAttributesWithType:(ff_AlignType) type isInner:(BOOL) isInner isVertical:(BOOL) isVertical {
-    ff_LayoutAttributes *attributes = [[self alloc]init];
++(instancetype)layoutAttributesWithType:(xx_AlignType) type isInner:(BOOL) isInner isVertical:(BOOL) isVertical {
+    xx_LayoutAttributes *attributes = [[self alloc]init];
     
     switch(type) {
-        case ff_AlignTypeTopLeft:
+        case xx_AlignTypeTopLeft:
             [attributes horizontalsWithFrom:NSLayoutAttributeLeft to:NSLayoutAttributeLeft];
             [attributes verticalsWithFrom:NSLayoutAttributeTop to:NSLayoutAttributeTop];
             if(isInner){
@@ -335,7 +335,7 @@ CGSize CGSizeNull(){
             } else {
                 return [attributes horizontalsWithFrom:NSLayoutAttributeRight to: NSLayoutAttributeLeft];
             }
-        case ff_AlignTypeTopRight:
+        case xx_AlignTypeTopRight:
             [attributes horizontalsWithFrom: NSLayoutAttributeRight to: NSLayoutAttributeRight];
             [attributes verticalsWithFrom: NSLayoutAttributeTop to: NSLayoutAttributeTop];
             
@@ -346,10 +346,10 @@ CGSize CGSizeNull(){
             } else {
                 return [attributes horizontalsWithFrom: NSLayoutAttributeLeft to: NSLayoutAttributeRight];
             }
-        case ff_AlignTypeTopCenter:        // 仅内部 & 垂直参照需要
+        case xx_AlignTypeTopCenter:        // 仅内部 & 垂直参照需要
             [[attributes horizontalsWithFrom:NSLayoutAttributeCenterX  to:NSLayoutAttributeCenterX] verticalsWithFrom:NSLayoutAttributeTop  to:NSLayoutAttributeTop];
             return isInner ? attributes : [attributes verticalsWithFrom:NSLayoutAttributeBottom  to:NSLayoutAttributeTop];
-        case ff_AlignTypeBottomLeft:
+        case xx_AlignTypeBottomLeft:
             [[attributes horizontalsWithFrom:NSLayoutAttributeLeft  to:NSLayoutAttributeLeft] verticalsWithFrom:NSLayoutAttributeBottom  to:NSLayoutAttributeBottom];
             
             if(isInner){
@@ -359,7 +359,7 @@ CGSize CGSizeNull(){
             } else {
                 return [attributes horizontalsWithFrom:NSLayoutAttributeRight  to:NSLayoutAttributeLeft];
             }
-        case ff_AlignTypeBottomRight:
+        case xx_AlignTypeBottomRight:
             [[attributes horizontalsWithFrom:NSLayoutAttributeRight  to:NSLayoutAttributeRight] verticalsWithFrom:NSLayoutAttributeBottom  to:NSLayoutAttributeBottom];
             if(isInner){
                 return attributes;
@@ -368,16 +368,16 @@ CGSize CGSizeNull(){
             } else {
                 return [attributes horizontalsWithFrom:NSLayoutAttributeLeft  to:NSLayoutAttributeRight];
             }
-        case ff_AlignTypeBottomCenter:     // 仅内部 & 垂直参照需要
+        case xx_AlignTypeBottomCenter:     // 仅内部 & 垂直参照需要
             [[attributes horizontalsWithFrom:NSLayoutAttributeCenterX  to:NSLayoutAttributeCenterX] verticalsWithFrom:NSLayoutAttributeBottom  to:NSLayoutAttributeBottom];
             return isInner ? attributes : [attributes verticalsWithFrom:NSLayoutAttributeTop  to:NSLayoutAttributeBottom];
-        case ff_AlignTypeCenterLeft:       // 仅内部 & 水平参照需要
+        case xx_AlignTypeCenterLeft:       // 仅内部 & 水平参照需要
             [[attributes horizontalsWithFrom:NSLayoutAttributeLeft  to:NSLayoutAttributeLeft] verticalsWithFrom:NSLayoutAttributeCenterY  to:NSLayoutAttributeCenterY];
             return isInner ? attributes : [attributes horizontalsWithFrom:NSLayoutAttributeRight  to:NSLayoutAttributeLeft];
-        case ff_AlignTypeCenterRight:      // 仅内部 & 水平参照需要
+        case xx_AlignTypeCenterRight:      // 仅内部 & 水平参照需要
             [[attributes horizontalsWithFrom:NSLayoutAttributeRight  to:NSLayoutAttributeRight] verticalsWithFrom:NSLayoutAttributeCenterY  to:NSLayoutAttributeCenterY];
             return isInner ? attributes : [attributes horizontalsWithFrom:NSLayoutAttributeLeft  to:NSLayoutAttributeRight];
-        case ff_AlignTypeCenterCenter:     // 仅内部参照需要
+        case xx_AlignTypeCenterCenter:     // 仅内部参照需要
             return [[self alloc]initWithHorizontal:NSLayoutAttributeCenterX referHorizontal:NSLayoutAttributeCenterX vertical:NSLayoutAttributeCenterY referVertical:NSLayoutAttributeCenterY];
         default: NSAssert(NO, @"枚举值不正确");
             return nil;
