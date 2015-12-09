@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0710"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FD7B77541BD38C4C0012F9E5"
-               BuildableName = "XXAutoLayout_OC.app"
-               BlueprintName = "XXAutoLayout_OC"
-               ReferencedContainer = "container:XXAutoLayout_OC.xcodeproj">
+               BlueprintIdentifier = "FDEAD4131C16B54200DE154A"
+               BuildableName = "XXAutoLayout.app"
+               BlueprintName = "XXAutoLayout"
+               ReferencedContainer = "container:XXAutoLayout.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,34 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FDEAD42C1C16B54200DE154A"
+               BuildableName = "XXAutoLayoutTests.xctest"
+               BlueprintName = "XXAutoLayoutTests"
+               ReferencedContainer = "container:XXAutoLayout.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FDEAD4371C16B54200DE154A"
+               BuildableName = "XXAutoLayoutUITests.xctest"
+               BlueprintName = "XXAutoLayoutUITests"
+               ReferencedContainer = "container:XXAutoLayout.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD7B77541BD38C4C0012F9E5"
-            BuildableName = "XXAutoLayout_OC.app"
-            BlueprintName = "XXAutoLayout_OC"
-            ReferencedContainer = "container:XXAutoLayout_OC.xcodeproj">
+            BlueprintIdentifier = "FDEAD4131C16B54200DE154A"
+            BuildableName = "XXAutoLayout.app"
+            BlueprintName = "XXAutoLayout"
+            ReferencedContainer = "container:XXAutoLayout.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD7B77541BD38C4C0012F9E5"
-            BuildableName = "XXAutoLayout_OC.app"
-            BlueprintName = "XXAutoLayout_OC"
-            ReferencedContainer = "container:XXAutoLayout_OC.xcodeproj">
+            BlueprintIdentifier = "FDEAD4131C16B54200DE154A"
+            BuildableName = "XXAutoLayout.app"
+            BlueprintName = "XXAutoLayout"
+            ReferencedContainer = "container:XXAutoLayout.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD7B77541BD38C4C0012F9E5"
-            BuildableName = "XXAutoLayout_OC.app"
-            BlueprintName = "XXAutoLayout_OC"
-            ReferencedContainer = "container:XXAutoLayout_OC.xcodeproj">
+            BlueprintIdentifier = "FDEAD4131C16B54200DE154A"
+            BuildableName = "XXAutoLayout.app"
+            BlueprintName = "XXAutoLayout"
+            ReferencedContainer = "container:XXAutoLayout.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

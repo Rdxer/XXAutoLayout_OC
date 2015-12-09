@@ -1,9 +1,9 @@
 //
 //  main.m
-//  FFAutoLayout_OC
+//  XXAutoLayout
 //
-//  Created by LXF on 15/10/18.
-//  Copyright © 2015年 Xiaofeng Li . All rights reserved.
+//  Created by LXF on 15/12/8.
+//  Copyright © 2015年 LXF. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

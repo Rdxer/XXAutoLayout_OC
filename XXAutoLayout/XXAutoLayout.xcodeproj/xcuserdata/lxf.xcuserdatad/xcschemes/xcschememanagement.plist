@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>FFAutoLayout_OC.xcscheme</key>
+		<key>XXAutoLayout.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>FD7B77541BD38C4C0012F9E5</key>
+		<key>FDEAD4131C16B54200DE154A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDEAD42C1C16B54200DE154A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDEAD4371C16B54200DE154A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
