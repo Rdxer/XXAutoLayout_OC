@@ -1,7 +1,7 @@
 //
 //  UIView+AutoLayout.h
 //
-//  Created by LXF on 15/9/29.
+//  Created by LXF on 14/9/29.
 //  Copyright © 2015年 Xiaofeng Li . All rights reserved.
 //
 
@@ -49,6 +49,8 @@ typedef NS_ENUM(NSInteger, xx_FillType){
 };
 
 @interface UIView (AutoLayout)
+
+
 
 /// 部分填充 (正方形填充)
 ///
@@ -151,6 +153,8 @@ typedef NS_ENUM(NSInteger, xx_FillType){
 ///
 ///  @return attribute 对应的约束
 - (nullable NSLayoutConstraint *)xx_ConstraintWithConstraintsList:(nonnull NSArray<  NSLayoutConstraint *> *)constraintsList attribute:(NSLayoutAttribute)attribute;
+
+
 
 @end
 
